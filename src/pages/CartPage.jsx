@@ -4,7 +4,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { HiOutlineCash } from "react-icons/hi";
 import { IoMdCheckboxOutline } from "react-icons/io";
-import ShoppingCart from '../components/ShoppingCart';
+
 // import ProductsData from '../components/Productcard'
 export default function CartPage() {
   return (
