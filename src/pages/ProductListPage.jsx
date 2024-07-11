@@ -5,9 +5,7 @@ import Earphone from '../assets/earphone.png'
 import Smartwatch from '../assets/smartwatch2.png'
 import Imagebg from '../assets/imagebg.png'
 import { IoIosSearch } from "react-icons/io";
-import ProductCard from '../components/Productcard'
-
-
+import Products from '../components/Products'
 
 function ProductListPage() {
     
@@ -28,9 +26,10 @@ function ProductListPage() {
             </span>
         
         </div>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <Products />
+        <Products />
+        <Products />
+        
         <div>
 
         </div>

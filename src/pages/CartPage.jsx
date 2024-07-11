@@ -4,16 +4,17 @@ import { IoLocationOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { HiOutlineCash } from "react-icons/hi";
 import { IoMdCheckboxOutline } from "react-icons/io";
+import Cart from '../components/Cart'
 
-// import ProductsData from '../components/Productcard'
+
 export default function CartPage() {
   return (
     <Layout>
         <div className=' font-[Inter] grid grid-cols-1 lg:grid-cols-2'>
-          {/* <div>
+          <div>
 
-            <ShoppingCart/>
-          </div> */}
+            <Cart  />
+          </div>
           <div className='flex flex-col p-4 bg-[#D9D9D9]'>
              <div>
                 <p className='font-semibold'>Delivery Details</p>

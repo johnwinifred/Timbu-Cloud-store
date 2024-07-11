@@ -8,10 +8,11 @@ import CheckoutEnd from './pages/CheckoutEnd';
 import CheckoutPage from './pages/CheckoutPage';
 
 
+
 function App() {
   return (
-    
-  <BrowserRouter>
+   
+        <BrowserRouter>
     
     <Routes>
     <Route exact path="/" element={<Homepage />} />
@@ -22,6 +23,7 @@ function App() {
         <Route path="/checkout" element={<CheckoutPage />} /> 
     </Routes>
   </BrowserRouter>
+  
   )
 }
 

@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import Logo from '../assets/logo.png';
 import { IoPerson } from "react-icons/io5";
 import { BiShoppingBag } from "react-icons/bi";
+import { Outlet, Link } from 'react-router-dom';
 
 
-import { Outlet, Link, useNavigate } from 'react-router-dom';
-
-
-function Navbar() {
+function Navbar({ productsInCart=[], setCartVisible}) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -25,7 +23,7 @@ function Navbar() {
 
           <div className="flex lg:flex-2">
             <button onClick={toggleDropdown} type="button" className="lg:hidden text-[#007300] hover:text-[#007300] focus:outline-none focus:ring-2 focus:ring-[#007300] rounded-lg inline-flex items-center justify-end">
-              <svg className={`w-8 h-8 ${isDropdownOpen ? 'hidden' : 'block'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <svg className={`w-8 h-8 ${isDropdownOpen ? 'hidden' : 'block'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" >
                 <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
               </svg>
               <svg className={`w-8 h-8 ${isDropdownOpen ? 'block' : 'hidden'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -58,11 +56,16 @@ function Navbar() {
           <IoPerson className='border rounded-full  text-white w-6 h-6 p-1' style={{ background: 'linear-gradient(to left, #FE8A68 0%, #EF5F43 100%)' }}  />
           
           
-          <Link to={'/cart'} >
-          
-          <button className='pt-2'><BiShoppingBag className='border rounded-full text-white w-6 h-6 p-1 ' style={{ background: 'linear-gradient(to left, #FE8A68 0%, #EF5F43 100%)' }} /></button>
-          
-          </Link>
+          <button
+              className='bg-transparent cursor-pointer relative'
+              onClick={() => setCartVisible(true)}>
+              <BiShoppingBag className='border rounded-full text-white w-6 h-6 p-1' style={{ background: 'linear-gradient(to left, #FE8A68 0%, #EF5F43 100%)' }} />
+              {productsInCart.length > 0 && (
+                <span className="absolute top-[-5px] right-[-5px] w-5 h-5 rounded-[12px] bg-green-500 text-white flex items-center justify-center text-xs">
+                  {productsInCart.length}
+                </span>
+              )}
+            </button>
           
           </div>
         </div>
