@@ -77,8 +77,8 @@ function Products() {
             </div>
             <div className='flex flex-col items-center p-4'>
               <img className="w-full h-40 object-contain mb-4" src={product.image} alt={product.name} />
-              <h4 className="text-lg font-semibold mb-2">{product.name}</h4>
-              <p className="text-gray-700 mb-4">{product.price}</p>
+              <h4 className="text-lg font-semibold mb-2 text-black">{product.name}</h4>
+              <p className="text-black mb-4">{product.price}</p>
               <div className='mt-6 flex justify-between items-center'>
                 <button className="bg-[#EF5F43] text-white px-4 py-2 rounded-md"
                   onClick={() => addProductToCart(product)} >

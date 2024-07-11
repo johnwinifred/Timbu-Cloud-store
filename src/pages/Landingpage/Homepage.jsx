@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom'
 import Products from '../../components/Products'
 // import ProductCard from '../../components/Productcard';
 
- function Homepage() {
+ function Homepage({ productsInCart=[], setCartVisible}) {
   return (
     <Layout>
         <div className="font-[Inter] bg-[#F6F5F5] text-white">
@@ -41,7 +41,7 @@ import Products from '../../components/Products'
             </div>
 
             <div>
-              < Products />
+              < Products productsInCart={productsInCart} setCartVisible={setCartVisible}/>
             </div>
            <Link to={'/products'}> 
            <button className=' rounded-2xl px-4 py-2'style={{ background: 'linear-gradient(to left, #FE8A68 0%, #EF5F43 100%)' }}>

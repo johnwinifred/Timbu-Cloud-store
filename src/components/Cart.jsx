@@ -30,7 +30,7 @@ function Cart({
               <img src={product.image} alt={product.name} className="w-24 bg-white" />
               <div className="flex-basis-1/2">
                 <h3 className="font-normal text-black">{product.name}</h3>
-                <span>{product.price * product.count}$</span>
+                <span className="text-black">{product.price * product.count}$</span>
               </div>
               <select
                 className="w-16 text-black outline-none"

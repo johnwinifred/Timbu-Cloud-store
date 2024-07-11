@@ -9,7 +9,7 @@ import CheckoutPage from './pages/CheckoutPage';
 
 
 
-function App() {
+function App({ productsInCart=[], setCartVisible}) {
   return (
    
         <BrowserRouter>
@@ -18,7 +18,7 @@ function App() {
     <Route exact path="/" element={<Homepage />} />
         <Route exact path="*" element={<ErrorPage />} />
         <Route path="/products" element={<ProductListPage />} />
-        <Route path="/cart" element={<CartPage />} />  
+        <Route path="/cart" element={<CartPage productsInCart={productsInCart} setCartVisible={setCartVisible}/>} />  
         <Route path="/checkoutend" element={<CheckoutEnd />} /> 
         <Route path="/checkout" element={<CheckoutPage />} /> 
     </Routes>

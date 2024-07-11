@@ -10,37 +10,37 @@ const products = [
     {
       id: 1,
       name: "Earphone",
-      price: '#15,000',
+      price: 15000,
       image: Earphone
     },
     {
       id: 2,
       name: "Smart Watch",
-      price: '#15,000',
+      price: 15000,
       image: Smartwatch
     },
     {
       id: 3,
       name: "MP3 Player",
-      price: '#15,000',
+      price: 15000,
       image: Mp3player
     },
     {
       id: 4,
       name: "Smart Watch",
-      price: '#15,000',
+      price: 15000,
       image: Smartwatch2
     },
     {
       id: 5,
       name: "iPhone 12",
-      price: '#700,000',
+      price: 700000,
       image: Iphone
     },
     {
       id: 6,
       name: "MacBook Air",
-      price: '#615,000',
+      price: 615000,
       image: Macbook
     }
   ];
