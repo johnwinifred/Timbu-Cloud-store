@@ -7,7 +7,7 @@ import Imagebg from '../assets/imagebg.png'
 import { IoIosSearch } from "react-icons/io";
 import Products from '../components/Products'
 
-function ProductListPage() {
+function ProductListPage({ productsInCart=[], setCartVisible}) {
     
 
   return (
@@ -26,9 +26,9 @@ function ProductListPage() {
             </span>
         
         </div>
-        <Products />
-        <Products />
-        <Products />
+        <Products productsInCart={productsInCart} setCartVisible={setCartVisible}/>
+        <Products productsInCart={productsInCart} setCartVisible={setCartVisible}/>
+        <Products productsInCart={productsInCart} setCartVisible={setCartVisible} />
         
         <div>
 
