@@ -20,15 +20,13 @@ function ProductListPage({ productsInCart=[], setCartVisible}) {
             
         </div>
         <div className='flex flex-col items-center p-12 '>
-            <span className='flex flex-row items-center px-6 py-2 lg:w-2/3 border border-black rounded-2xl '>
+            <span className='flex flex-row items-center gap-6 px-6 py-2 lg:w-2/3 border border-black rounded-2xl '>
             <IoIosSearch />
-            <input type="text" className='bg-inherit w-fit' placeholder='Search Products, Categories, Brands' />
+            <input type="text" className='bg-inherit w-full outline-none' placeholder='Search Products, Categories, Brands' />
             </span>
         
         </div>
         <Products productsInCart={productsInCart} setCartVisible={setCartVisible}/>
-        <Products productsInCart={productsInCart} setCartVisible={setCartVisible}/>
-        <Products productsInCart={productsInCart} setCartVisible={setCartVisible} />
         
         <div>
 
